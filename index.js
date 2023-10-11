@@ -9,7 +9,8 @@ const { S3Client, GetObjectCommand, PutObjectCommand, S3 } = require('@aws-sdk/c
 let s3client = new S3({ region: 'us-west-2' });
 
 // Lambda function entry point
-export const handler = async (event) => {
+// export const handler = async (event) => {
+module.exports.handler = async (event) => {
   // Log initial message and event data
   console.log('Lambda code is running!', event.Records);
 

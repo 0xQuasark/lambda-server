@@ -4,9 +4,14 @@
   "description": "AWS Lambda allows writing code that is triggered in the cloud, without thinking about maintaining servers. We’ll use it today to automatically run some processing on image files after they’re uploaded to an S3 Bucket.",
   "main": "index.js",
   "scripts": {
-    "test": "node lambda.test.js"
+    "test": "jest --verbose --coverage upload.test.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.427.0",
+    "aws-sdk": "^2.1472.0",
+    "jest": "^29.7.0"
+  }
 }
